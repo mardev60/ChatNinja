@@ -2,7 +2,7 @@
     <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
         <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">Connexion</h2>
         <form>
-            <div class="mb-4">
+            <div class="mb-6">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
                     Email
                 </label>
@@ -12,11 +12,11 @@
                     type="email"
                     placeholder="exemple@mail.com"
                     name="email"
-                    [ngModel]="email"
+                    [(ngModel)]="email"
                 />
             </div>
-            <div class="mb-6">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+            <div class="mb-5">
+                <label class="block text-gray-700 text-sm font-bold" for="password">
                     Mot de passe
                 </label>
                 <input
@@ -25,9 +25,10 @@
                     type="password"
                     placeholder="********"
                     name="password"
-                    [ngModel]="password"
+                    [(ngModel)]="password"
                 />
             </div>
+            <p class="text-red-500 text-xs italic mb-4">{{ error }}</p>
             <div class="flex items-center justify-between">
                 <button
                     class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
